@@ -1,0 +1,22 @@
+#ipsum
+{
+	font-family: helvetica;
+}
+#titlecard{
+	background-color:rgba(0, 0, 0, 0.8);
+	border-radius: 5px;
+	padding: 10px;
+	text-align: center;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#titlecard h1{
+	font-family: 'Black Ops One', cursive;
+	font-size: 4.0rem; 
+	line-height: 1.2;  
+	letter-spacing: 3px;
+	color: white;
+}
