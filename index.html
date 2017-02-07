@@ -126,13 +126,12 @@ $(document).ready(function() {
             $("#typfrm-survey").show();
             $("#haze").show();
 		if (srvy != "" && srvy != null) {
-                setCookie("survey", srvy, 30);
-            }
+                	setCookie("survey", srvy, 30);
+            	}
         } else {
-            console.log("no cookie")
+            console.log("yes cookie")
             $("#typfrm-survey").hide();
             $("#haze").hide();
-            
         }
     }
     checkCookie()
