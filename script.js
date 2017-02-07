@@ -243,8 +243,8 @@ document.getElementById("generate").addEventListener("click", function(){
         var expires = "expires=" + d.toGMTString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
-    function getCookie(cname) {
-        var name = cname + "=";
+    function getCookie() {
+        var name = "survey";
         var decodedCookie = decodeURIComponent(document.cookie);
         var ca = decodedCookie.split(';');
         for (var i = 0; i < ca.length; i++) {
