@@ -277,7 +277,7 @@ document.getElementById("generate").addEventListener("click", function(){
 	setTimeout(function(){ 
 		console.log("checking cookie");
 		checkCookie(); 
-	}, 120000);
+	}, 15000);
 	
     //
 	console.log("end of script");
