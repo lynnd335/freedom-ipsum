@@ -221,6 +221,66 @@ document.getElementById("generate").addEventListener("click", function(){
 		}
 		document.getElementById("ipsum").innerHTML = output;
 });
+
+	$("#typfrm-survey").hide();
+	$("#haze").hide();
+    var qs, js, q, s, d = document,
+        gi = d.getElementById,
+        ce = d.createElement,
+        gt = d.getElementsByTagName,
+        id = 'typef_orm',
+        b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
+    if (!gi.call(d, id)) {
+        js = ce.call(d, 'script');
+        js.id = id;
+        js.src = b + 'widget.js';
+        q = gt.call(d, 'script')[0];
+        q.parentNode.insertBefore(js, q)
+    }
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function checkCookie() {
+        var srvy = getCookie("survey");
+        if (srvy === "") {
+            console.log("no cookie")
+            $("#typfrm-survey").show();
+            $("#haze").show();
+	    setCookie("survey", srvy, 30);
+                	
+            	
+        } else {
+            console.log("yes cookie")
+            $("#typfrm-survey").hide();
+            $("#haze").hide();
+        }
+    }
+
+	setTimeout(function(){ 
+		console.log("checking cookie");
+		checkCookie(); 
+	}, 120000);
+	
+    //
+	console.log("end of script");
 		
 });	
 
