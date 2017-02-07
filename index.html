@@ -122,13 +122,13 @@ $(document).ready(function() {
     function checkCookie() {
         var srvy = getCookie("survey");
         if (srvy !== "") {
-            console.log("no cookie")
-            $("#typfrm-survey").show();
-            $("#haze").show();
-        } else {
             console.log("yes cookie")
             $("#typfrm-survey").hide();
             $("#haze").hide();
+        } else {
+            console.log("no cookie")
+            $("#typfrm-survey").show();
+            $("#haze").show();
             if (srvy != "" && srvy != null) {
                 setCookie("survey", srvy, 30);
             }
