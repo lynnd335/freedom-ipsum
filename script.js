@@ -238,10 +238,7 @@ document.getElementById("generate").addEventListener("click", function(){
         q.parentNode.insertBefore(js, q)
     }
     function setCookie(cvalue, exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-        var expires = "expires=" + d.toGMTString();
-        document.cookie = "survey" + "=" + cvalue + ";" + expires + ";path=/";
+        
     }
     function getCookie() {
         var name = "survey";
@@ -265,8 +262,10 @@ document.getElementById("generate").addEventListener("click", function(){
             console.log("no cookie")
             $("#typfrm-survey").show();
             $("#haze").show();
-	    setCookie(srvy, 30);
-   	
+   		var d = new Date();
+        d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = "survey" + "=" + cvalue + ";" + expires + ";path=/";
             	
         } else {
             console.log("yes cookie")
