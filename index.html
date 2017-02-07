@@ -125,16 +125,21 @@ $(document).ready(function() {
             console.log("no cookie")
             $("#typfrm-survey").show();
             $("#haze").show();
-		if (srvy != "" && srvy != null) {
-                	setCookie("survey", srvy, 30);
-            	}
+	    setCookie("survey", srvy, 30);
+                	
+            	
         } else {
             console.log("yes cookie")
             $("#typfrm-survey").hide();
             $("#haze").hide();
         }
     }
-    checkCookie()
+
+	setTimeout(function(){ 
+		checkCookie(); 
+	}, 120000);
+	
+    
 
 })();
 </script>
