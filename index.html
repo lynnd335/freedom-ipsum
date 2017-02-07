@@ -123,15 +123,16 @@ $(document).ready(function() {
         var srvy = getCookie("survey");
         if (srvy === "") {
             console.log("no cookie")
-            $("#typfrm-survey").hide();
-            $("#haze").hide();
-        } else {
-            console.log("no cookie")
             $("#typfrm-survey").show();
             $("#haze").show();
-            if (srvy != "" && srvy != null) {
+		if (srvy != "" && srvy != null) {
                 setCookie("survey", srvy, 30);
             }
+        } else {
+            console.log("no cookie")
+            $("#typfrm-survey").hide();
+            $("#haze").hide();
+            
         }
     }
     checkCookie()
