@@ -121,8 +121,8 @@ $(document).ready(function() {
     }
     function checkCookie() {
         var srvy = getCookie("survey");
-        if (srvy != "") {
-            console.log("yes cookie")
+        if (srvy === "") {
+            console.log("no cookie")
             $("#typfrm-survey").hide();
             $("#haze").hide();
         } else {
