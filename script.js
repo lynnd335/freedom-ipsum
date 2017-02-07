@@ -260,7 +260,8 @@ document.getElementById("generate").addEventListener("click", function(){
     }
     function checkCookie() {
         var srvy = getCookie("survey");
-        if (srvy === "") {
+        console.log(srvy);
+	if (srvy === "") {
             console.log("no cookie")
             $("#typfrm-survey").show();
             $("#haze").show();
