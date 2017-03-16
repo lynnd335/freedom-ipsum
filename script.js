@@ -5,7 +5,7 @@ $(document).ready(function() {
         "God Bless America",
         "Chuck Norris",
         "bacon cheeseburgers",
-        "fireworks",
+        "dangerous illegal fireworks",
         "explosions",
         "bald eagles",
         "better dead than red",
@@ -161,7 +161,18 @@ $(document).ready(function() {
         "elections",
         "Home Depot",
         "ESPN2",
-        "weekends"
+        "weekends",
+        "NCIS: Los Angeles",
+        "arena football",
+        "mega millions jackpot",
+        "Danny Glover",
+        "The Expendables",
+        "Xbox",
+        "Wall Street",
+        "Affordable Care Act",
+        "grass roots",
+        "politics",
+        "Labor Day Weekend"    
     ];
 
     document.getElementById("ipsum").innerHTML = randoParagraph() + randoParagraph() + randoParagraph() + randoParagraph();
